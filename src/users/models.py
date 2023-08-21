@@ -34,9 +34,6 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractUser):
-    is_verified = models.BooleanField(_('Verification'), default=False)
-    code = models.IntegerField(_('Verification code'), null=True, blank=True)
-
     objects = UserManager()
 
     class Meta:

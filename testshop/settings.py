@@ -68,10 +68,10 @@ AUTH_USER_MODEL = 'users.User'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "db",
+        "NAME": "testshopdb",
+        "USER": "chyngyz",
+        "PASSWORD": "1234",
+        "HOST": "localhost",
         "PORT": 5432,
     }
 }
@@ -119,16 +119,6 @@ CACHES = {
         }
     }
 }
-
-
-# Google SMTP setting
-
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-
 
 
 # Simple JWT

@@ -5,38 +5,24 @@ from django.contrib import auth
 from rest_framework.exceptions import AuthenticationFailed
 
 
-class RegisterSerializer(serializers.ModelSerializer):
-    confirm_password = serializers.CharField(write_only=True, required=True)
-    
+class RegisterSerializer(serializers.ModelSerializer):    
     class Meta:
         model = User
-        fields = ['username', 'email', 'password', 'confirm_password']
+        fields = ['username', 'email', 'password']
         
     def save(self, **kwargs):
         email = self.validated_data['email']
         username = self.validated_data['username']
         password = self.validated_data['password']
-        confirm_password = self.validated_data['confirm_password']
         
         user = User(
             email=email,
             username=username
         )
         
-        if password != confirm_password:
-            raise serializers.ValidationError({'password': _('Пароли не совпадают.')})
-        
         user.set_password(password)
         user.save()
         return user
-    
-
-class VerifyEmailSerializer(serializers.Serializer):
-    email = serializers.EmailField()
-    code = serializers.IntegerField()
-
-    class Meta:
-        fields = ['email', 'code']
         
         
 class LoginSerializer(serializers.ModelSerializer):
@@ -64,9 +50,7 @@ class LoginSerializer(serializers.ModelSerializer):
 
         if not user:
             raise AuthenticationFailed('Invalid credentials, try again.')
-        if not user.is_verified:
-            raise AuthenticationFailed('Email is not verified.')
-
+        
         return {
             'username': user.username,
             'tokens': user.token()
