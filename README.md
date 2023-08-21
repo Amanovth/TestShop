@@ -6,5 +6,5 @@
    ```bash
    git clone https://github.com/Amanovth/TestShop.git
 
-   ```bash
-   git clone git@github.com:Amanovth/TestShop.git
+```bash
+git clone git@github.com:Amanovth/TestShop.git
