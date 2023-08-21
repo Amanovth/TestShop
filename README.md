@@ -2,9 +2,19 @@
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Amanovth/TestShop.git
+1. Clone the repository using HTTPS:
+```shell
+git clone https://github.com/Amanovth/TestShop.git
 
-```bash
+```
+Or using SSH:
+
+```shell
 git clone git@github.com:Amanovth/TestShop.git
+
+```
+
+2. Go to repository:
+```shell
+cd TestShop/
+```
