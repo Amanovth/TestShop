@@ -18,3 +18,8 @@ git clone git@github.com:Amanovth/TestShop.git
 ```shell
 cd TestShop/
 ```
+
+3. Run the container:
+```shell
+docker-compose up --build
+```
