@@ -68,10 +68,10 @@ AUTH_USER_MODEL = 'users.User'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "testshopdb",
-        "USER": "chyngyz",
-        "PASSWORD": "1234",
-        "HOST": "localhost",
+        "NAME": "postgres",
+        "USER": "potgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",
         "PORT": 5432,
     }
 }
