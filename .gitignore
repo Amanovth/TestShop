@@ -23,8 +23,6 @@ __pycache__/
 
 !*media/.gitkeep
 media/profile_photos
-!src/*/migrations/__init__.py
-src/*/migrations/*
 log/debug.log
 
 build
