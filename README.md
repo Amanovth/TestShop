@@ -19,7 +19,7 @@ git clone git@github.com:Amanovth/TestShop.git
 cd TestShop/
 ```
 
-3. Run the container:
+3. Run the start.sh script:
 ```shell
-docker-compose up --build
+./start.sh
 ```
